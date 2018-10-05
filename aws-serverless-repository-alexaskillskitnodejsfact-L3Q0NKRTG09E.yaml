@@ -1,0 +1,18 @@
+﻿AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Demonstrate a basic fact skill built with the ASK NodeJS SDK
+Resources:
+  awsserverlessrepositoryalexaskillskitnodejsfactL3Q0NKRTG09E:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs8.10
+      CodeUri: .
+      Description: Demonstrate a basic fact skill built with the ASK NodeJS SDK
+      MemorySize: 128
+      Timeout: 7
+      Role: >-
+        arn:aws:iam::526127058206:role/aws-serverless-repository-alexaskillskitnodejsfact-18ESOATG1VVIM
+      Events:
+        AlexaSkillEvent:
+          Type: AlexaSkill
